@@ -2,26 +2,38 @@
   "name": "Garry",
   "born": "2026-05-23T05:58:01.308Z",
   "stats": {
-    "hunger": 59,
+    "hunger": 71,
     "happiness": 100,
     "energy": 28,
     "affection": 100
   },
   "mood": "content",
-  "lastTick": "2026-05-23T06:03:30.219Z",
+  "lastTick": "2026-05-23T06:04:23.605Z",
   "lastAction": {
-    "user": "you",
-    "action": "play",
-    "payload": {},
-    "ts": "2026-05-23T05:58:37.868Z",
+    "user": "TheVinizzz",
+    "action": "treat",
+    "payload": null,
+    "ts": "2026-05-23T06:04:23.605Z",
     "statsAfter": {
-      "hunger": 59,
+      "hunger": 71,
       "happiness": 100,
       "energy": 28,
       "affection": 100
     }
   },
   "history": [
+    {
+      "user": "TheVinizzz",
+      "action": "treat",
+      "payload": null,
+      "ts": "2026-05-23T06:04:23.605Z",
+      "statsAfter": {
+        "hunger": 71,
+        "happiness": 100,
+        "energy": 28,
+        "affection": 100
+      }
+    },
     {
       "user": "you",
       "action": "play",

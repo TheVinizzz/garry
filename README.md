@@ -4,10 +4,10 @@
 ## 🍪 Deixa um petisco para o Garry
 
 <a href="https://github.com/TheVinizzz/garry/issues/new?template=treat.yml" title="deixa um petisco pro Garry">
-  <img alt="Garry — clica em mim!" src="garry.svg?v=2026-05-23T05%3A58%3A37.868Z" width="460"/>
+  <img alt="Garry — clica em mim!" src="garry.svg?v=2026-05-23T06%3A04%3A23.605Z" width="460"/>
 </a>
 
-_**you** played with Garry · `2026-05-23 05:58 UTC`_
+_**TheVinizzz** gave a treat to Garry · `2026-05-23 06:04 UTC`_
 
 <table><tr>
 
