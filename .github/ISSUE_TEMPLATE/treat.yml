@@ -12,4 +12,4 @@ body:
       label: Confirm
       options:
         - label: Yes.
-          required: true
+          required: false

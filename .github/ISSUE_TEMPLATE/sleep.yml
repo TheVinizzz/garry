@@ -12,4 +12,4 @@ body:
       label: Confirm
       options:
         - label: Sweet dreams Garry.
-          required: true
+          required: false

@@ -14,41 +14,40 @@ export function injectBlock(readmeContent, block) {
 }
 
 export function statusBlock(state, { repo, svgPath = 'garry.svg' } = {}) {
-  const issuesBase = repo ? `https://github.com/${repo}/issues/new?template=` : '#';
+  // We bypass Issue Forms entirely — using pre-filled regular Issue URLs cuts
+  // the interaction down to ONE click ("Submit new issue") instead of two.
+  // The interact workflow parses the title prefix `[garry/<action>]` anyway.
+  const issuesBase = repo ? `https://github.com/${repo}/issues/new` : '#';
   const v = encodeURIComponent(state.lastAction?.ts || state.lastTick || Date.now());
   const ts = new Date(state.lastAction?.ts || state.lastTick).toISOString().replace('T', ' ').slice(0, 16);
   const last = state.lastAction || { action: 'born', user: null };
   const lastLine = last.user
     ? `**${escapeMd(last.user)}** ${verbFor(last.action)} Garry · \`${ts} UTC\``
-    : `Garry just woke up · \`${ts} UTC\``;
+    : `Garry awoke · \`${ts} UTC\``;
 
-  const button = (action, emoji, label) => `
-    <td align="center" width="92">
-      <a href="${issuesBase}${action}.yml" title="${label}">
-        <img alt="${label}" src="https://img.shields.io/badge/${encodeURIComponent(emoji)}-${encodeURIComponent(label)}-${BTN_COLOR[action]}?style=for-the-badge&labelColor=1f1814" height="44"/>
-      </a>
-    </td>`;
+  const actionUrl = (action, niceLabel) =>
+    `${issuesBase}?title=${encodeURIComponent(`[garry/${action}] ${niceLabel}`)}&body=${encodeURIComponent('Auto-submit to interact with Garry. Just press **Submit new issue** — no need to fill anything.')}&labels=${encodeURIComponent('garry,' + action)}`;
 
+  const btn = (action, emoji, label) =>
+    `<a href="${actionUrl(action, label)}" title="${label} Garry"><img alt="${label}" src="https://img.shields.io/badge/${encodeURIComponent(emoji)}-${encodeURIComponent(label)}-${BTN_COLOR[action]}?style=flat-square&labelColor=1f1814" height="22"/></a>`;
+
+  // IMPORTANT: keep this block flush-left. Any leading spaces inside the
+  // <table> would trigger Markdown's 4-space-indent code block rule and
+  // GitHub would render the HTML as plain text.
   return [
+    '<details><summary>🐈 <b>Deixa um petisco para o Garry</b></summary>',
+    '',
     '<div align="center">',
     '',
-    '## 🍪 Deixa um petisco para o Garry',
+    `<a href="${actionUrl('treat', 'petisco')}" title="deixa um petisco pro Garry"><img alt="Garry" src="${svgPath}?v=${v}" width="280"/></a>`,
     '',
-    `<a href="${issuesBase}treat.yml" title="deixa um petisco pro Garry">`,
-    `  <img alt="Garry — clica em mim!" src="${svgPath}?v=${v}" width="460"/>`,
-    '</a>',
+    `<sub>${lastLine}</sub>`,
     '',
-    `_${lastLine}_`,
-    '',
-    '<table><tr>',
-    button('treat', '🍪', 'petisco'),
-    button('pet', '🤚', 'cafuné'),
-    button('feed', '🍣', 'almoço'),
-    button('play', '🧶', 'brincar'),
-    button('sleep', '💤', 'soneca'),
-    '</tr></table>',
+    `${btn('treat', '🍪', 'petisco')} ${btn('pet', '🤚', 'cafuné')} ${btn('feed', '🍣', 'almoço')} ${btn('play', '🧶', 'brincar')} ${btn('sleep', '💤', 'soneca')}`,
     '',
     '</div>',
+    '',
+    '</details>',
   ].join('\n');
 }
 

@@ -16,4 +16,4 @@ body:
       label: I'm here to pet the cat
       options:
         - label: Yes, I love Garry.
-          required: true
+          required: false

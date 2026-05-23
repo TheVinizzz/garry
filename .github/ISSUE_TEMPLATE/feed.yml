@@ -18,11 +18,11 @@ body:
         - whipped cream
       default: 0
     validations:
-      required: true
+      required: false
   - type: checkboxes
     id: confirm
     attributes:
       label: Confirm
       options:
         - label: Yes, Garry deserves it.
-          required: true
+          required: false

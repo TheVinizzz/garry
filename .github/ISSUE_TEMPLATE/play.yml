@@ -17,11 +17,11 @@ body:
         - cardboard box
       default: 0
     validations:
-      required: true
+      required: false
   - type: checkboxes
     id: confirm
     attributes:
       label: Confirm
       options:
         - label: Let's go.
-          required: true
+          required: false
