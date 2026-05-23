@@ -1,0 +1,12 @@
+name = "garry-worker"
+main = "src/index.js"
+compatibility_date = "2026-05-01"
+
+# Secrets to set after first `wrangler deploy`:
+#   wrangler secret put GITHUB_TOKEN
+#     paste a fine-grained PAT with Issues: Read & Write scoped to <user>/garry
+#
+# Vars (non-secret) can also be set via wrangler.toml directly:
+[vars]
+REPO = "TheVinizzz/garry"
+REDIRECT_AFTER = "https://github.com/TheVinizzz"
