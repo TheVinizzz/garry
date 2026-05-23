@@ -3,40 +3,40 @@
 
 ## 🍪 Deixa um petisco para o Garry
 
-<a href="#treat.yml" title="deixa um petisco pro Garry">
-  <img alt="Garry — clica em mim!" src="garry.svg?v=2026-05-23T05%3A58%3A01.308Z" width="460"/>
+<a href="https://github.com/TheVinizzz/garry/issues/new?template=treat.yml" title="deixa um petisco pro Garry">
+  <img alt="Garry — clica em mim!" src="garry.svg?v=2026-05-23T05%3A58%3A37.868Z" width="460"/>
 </a>
 
-_Garry just woke up · `2026-05-23 05:58 UTC`_
+_**you** played with Garry · `2026-05-23 05:58 UTC`_
 
 <table><tr>
 
     <td align="center" width="92">
-      <a href="#treat.yml" title="petisco">
+      <a href="https://github.com/TheVinizzz/garry/issues/new?template=treat.yml" title="petisco">
         <img alt="petisco" src="https://img.shields.io/badge/%F0%9F%8D%AA-petisco-ffd84a?style=for-the-badge&labelColor=1f1814" height="44"/>
       </a>
     </td>
 
     <td align="center" width="92">
-      <a href="#pet.yml" title="cafuné">
+      <a href="https://github.com/TheVinizzz/garry/issues/new?template=pet.yml" title="cafuné">
         <img alt="cafuné" src="https://img.shields.io/badge/%F0%9F%A4%9A-cafun%C3%A9-ff7eb4?style=for-the-badge&labelColor=1f1814" height="44"/>
       </a>
     </td>
 
     <td align="center" width="92">
-      <a href="#feed.yml" title="almoço">
+      <a href="https://github.com/TheVinizzz/garry/issues/new?template=feed.yml" title="almoço">
         <img alt="almoço" src="https://img.shields.io/badge/%F0%9F%8D%A3-almo%C3%A7o-f59a3a?style=for-the-badge&labelColor=1f1814" height="44"/>
       </a>
     </td>
 
     <td align="center" width="92">
-      <a href="#play.yml" title="brincar">
+      <a href="https://github.com/TheVinizzz/garry/issues/new?template=play.yml" title="brincar">
         <img alt="brincar" src="https://img.shields.io/badge/%F0%9F%A7%B6-brincar-b78bff?style=for-the-badge&labelColor=1f1814" height="44"/>
       </a>
     </td>
 
     <td align="center" width="92">
-      <a href="#sleep.yml" title="soneca">
+      <a href="https://github.com/TheVinizzz/garry/issues/new?template=sleep.yml" title="soneca">
         <img alt="soneca" src="https://img.shields.io/badge/%F0%9F%92%A4-soneca-7fc7ea?style=for-the-badge&labelColor=1f1814" height="44"/>
       </a>
     </td>
