@@ -2,13 +2,13 @@
   "name": "Garry",
   "born": "2026-05-23T05:58:01.308Z",
   "stats": {
-    "hunger": 22,
-    "happiness": 75,
+    "hunger": 18,
+    "happiness": 73,
     "energy": 0,
-    "affection": 75
+    "affection": 73
   },
   "mood": "sleep",
-  "lastTick": "2026-05-23T18:29:53.962Z",
+  "lastTick": "2026-05-23T19:34:59.994Z",
   "lastAction": {
     "user": "TheVinizzz",
     "action": "treat",
