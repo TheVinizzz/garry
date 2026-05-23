@@ -1,0 +1,15 @@
+name: 💤 tuck Garry in
+description: Naptime. Restores energy.
+title: "[garry/sleep] bedtime"
+labels: ["garry", "sleep"]
+body:
+  - type: markdown
+    attributes:
+      value: "## 💤 tuck Garry in"
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirm
+      options:
+        - label: Sweet dreams Garry.
+          required: true

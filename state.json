@@ -1,0 +1,266 @@
+{
+  "name": "Garry",
+  "born": "2026-05-23T05:58:01.308Z",
+  "stats": {
+    "hunger": 59,
+    "happiness": 100,
+    "energy": 28,
+    "affection": 100
+  },
+  "mood": "content",
+  "lastTick": "2026-05-23T05:58:37.868Z",
+  "lastAction": {
+    "user": "you",
+    "action": "play",
+    "payload": {},
+    "ts": "2026-05-23T05:58:37.868Z",
+    "statsAfter": {
+      "hunger": 59,
+      "happiness": 100,
+      "energy": 28,
+      "affection": 100
+    }
+  },
+  "history": [
+    {
+      "user": "you",
+      "action": "play",
+      "payload": {},
+      "ts": "2026-05-23T05:58:37.868Z",
+      "statsAfter": {
+        "hunger": 59,
+        "happiness": 100,
+        "energy": 28,
+        "affection": 100
+      }
+    },
+    {
+      "user": "you",
+      "action": "play",
+      "payload": {},
+      "ts": "2026-05-23T05:58:37.450Z",
+      "statsAfter": {
+        "hunger": 65,
+        "happiness": 100,
+        "energy": 40,
+        "affection": 100
+      }
+    },
+    {
+      "user": "you",
+      "action": "play",
+      "payload": {},
+      "ts": "2026-05-23T05:58:37.250Z",
+      "statsAfter": {
+        "hunger": 71,
+        "happiness": 100,
+        "energy": 52,
+        "affection": 100
+      }
+    },
+    {
+      "user": "you",
+      "action": "play",
+      "payload": {},
+      "ts": "2026-05-23T05:58:36.992Z",
+      "statsAfter": {
+        "hunger": 77,
+        "happiness": 100,
+        "energy": 64,
+        "affection": 100
+      }
+    },
+    {
+      "user": "you",
+      "action": "play",
+      "payload": {},
+      "ts": "2026-05-23T05:58:35.000Z",
+      "statsAfter": {
+        "hunger": 83,
+        "happiness": 100,
+        "energy": 76,
+        "affection": 100
+      }
+    },
+    {
+      "user": "you",
+      "action": "play",
+      "payload": {},
+      "ts": "2026-05-23T05:58:34.581Z",
+      "statsAfter": {
+        "hunger": 89,
+        "happiness": 100,
+        "energy": 88,
+        "affection": 100
+      }
+    },
+    {
+      "user": "you",
+      "action": "feed",
+      "payload": {},
+      "ts": "2026-05-23T05:58:25.186Z",
+      "statsAfter": {
+        "hunger": 95,
+        "happiness": 100,
+        "energy": 100,
+        "affection": 100
+      }
+    },
+    {
+      "user": "you",
+      "action": "pet",
+      "payload": {},
+      "ts": "2026-05-23T05:58:24.051Z",
+      "statsAfter": {
+        "hunger": 65,
+        "happiness": 100,
+        "energy": 98,
+        "affection": 100
+      }
+    },
+    {
+      "user": "you",
+      "action": "pet",
+      "payload": {},
+      "ts": "2026-05-23T05:58:23.344Z",
+      "statsAfter": {
+        "hunger": 65,
+        "happiness": 100,
+        "energy": 99,
+        "affection": 100
+      }
+    },
+    {
+      "user": "you",
+      "action": "sleep",
+      "payload": {},
+      "ts": "2026-05-23T05:58:22.061Z",
+      "statsAfter": {
+        "hunger": 65,
+        "happiness": 100,
+        "energy": 100,
+        "affection": 100
+      }
+    },
+    {
+      "user": "you",
+      "action": "sleep",
+      "payload": {},
+      "ts": "2026-05-23T05:58:21.642Z",
+      "statsAfter": {
+        "hunger": 70,
+        "happiness": 100,
+        "energy": 100,
+        "affection": 100
+      }
+    },
+    {
+      "user": "you",
+      "action": "sleep",
+      "payload": {},
+      "ts": "2026-05-23T05:58:21.193Z",
+      "statsAfter": {
+        "hunger": 75,
+        "happiness": 100,
+        "energy": 100,
+        "affection": 100
+      }
+    },
+    {
+      "user": "you",
+      "action": "sleep",
+      "payload": {},
+      "ts": "2026-05-23T05:58:20.676Z",
+      "statsAfter": {
+        "hunger": 80,
+        "happiness": 100,
+        "energy": 100,
+        "affection": 100
+      }
+    },
+    {
+      "user": "you",
+      "action": "sleep",
+      "payload": {},
+      "ts": "2026-05-23T05:58:20.500Z",
+      "statsAfter": {
+        "hunger": 85,
+        "happiness": 100,
+        "energy": 100,
+        "affection": 100
+      }
+    },
+    {
+      "user": "you",
+      "action": "sleep",
+      "payload": {},
+      "ts": "2026-05-23T05:58:20.317Z",
+      "statsAfter": {
+        "hunger": 90,
+        "happiness": 100,
+        "energy": 100,
+        "affection": 100
+      }
+    },
+    {
+      "user": "you",
+      "action": "sleep",
+      "payload": {},
+      "ts": "2026-05-23T05:58:19.845Z",
+      "statsAfter": {
+        "hunger": 95,
+        "happiness": 100,
+        "energy": 100,
+        "affection": 100
+      }
+    },
+    {
+      "user": "you",
+      "action": "treat",
+      "payload": {},
+      "ts": "2026-05-23T05:58:17.934Z",
+      "statsAfter": {
+        "hunger": 100,
+        "happiness": 100,
+        "energy": 78,
+        "affection": 100
+      }
+    },
+    {
+      "user": "you",
+      "action": "treat",
+      "payload": {},
+      "ts": "2026-05-23T05:58:17.784Z",
+      "statsAfter": {
+        "hunger": 98,
+        "happiness": 100,
+        "energy": 78,
+        "affection": 95
+      }
+    },
+    {
+      "user": "you",
+      "action": "treat",
+      "payload": {},
+      "ts": "2026-05-23T05:58:17.442Z",
+      "statsAfter": {
+        "hunger": 86,
+        "happiness": 100,
+        "energy": 78,
+        "affection": 89
+      }
+    },
+    {
+      "user": "you",
+      "action": "play",
+      "payload": {},
+      "ts": "2026-05-23T05:58:15.820Z",
+      "statsAfter": {
+        "hunger": 74,
+        "happiness": 100,
+        "energy": 78,
+        "affection": 83
+      }
+    }
+  ]
+}

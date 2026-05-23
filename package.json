@@ -1,0 +1,19 @@
+{
+  "name": "garry",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Garry — a chonky pixel cat that lives in your GitHub profile README.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "tick": "node src/cli.js tick",
+    "render": "node src/cli.js render",
+    "act": "node src/cli.js act",
+    "gen": "node bin/generate.js",
+    "play": "node bin/playtest.js",
+    "test": "node --test test/**/*.test.js"
+  }
+}

@@ -1,0 +1,37 @@
+name: Garry — tick
+
+# Decays stats and re-renders Garry every 30 minutes.
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: garry-state
+  cancel-in-progress: false
+
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Tick
+        env:
+          GARRY_REPO: ${{ github.repository }}
+        run: npm run tick
+      - name: Commit
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(garry): tick 🐾 ${{ github.run_number }}"
+          file_pattern: "state.json garry.svg README.md"
+          commit_user_name: garry-bot
+          commit_user_email: garry-bot@users.noreply.github.com

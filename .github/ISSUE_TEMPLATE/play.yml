@@ -1,0 +1,27 @@
+name: 🧶 play with Garry
+description: Play with Garry. Bumps happiness + affection, drains energy.
+title: "[garry/play] zoom zoom"
+labels: ["garry", "play"]
+body:
+  - type: markdown
+    attributes:
+      value: "## 🧶 play with Garry"
+  - type: dropdown
+    id: toy
+    attributes:
+      label: Toy
+      options:
+        - yarn ball
+        - feather wand
+        - laser pointer
+        - cardboard box
+      default: 0
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirm
+      options:
+        - label: Let's go.
+          required: true

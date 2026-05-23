@@ -1,0 +1,15 @@
+name: 🍪 give Garry a treat
+description: A small snack. Boosts happiness + affection.
+title: "[garry/treat] little snack"
+labels: ["garry", "treat"]
+body:
+  - type: markdown
+    attributes:
+      value: "## 🍪 treat Garry"
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirm
+      options:
+        - label: Yes.
+          required: true

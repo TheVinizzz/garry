@@ -1,0 +1,77 @@
+name: Garry — interact
+
+# Triggers when someone opens an issue using one of Garry's Issue Form templates.
+# Parses the form, applies the action, commits state + re-rendered SVG, replies
+# in the issue and closes it.
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: garry-state
+  cancel-in-progress: false
+
+jobs:
+  interact:
+    if: |
+      startsWith(github.event.issue.title, '[garry/pet]') ||
+      startsWith(github.event.issue.title, '[garry/feed]') ||
+      startsWith(github.event.issue.title, '[garry/play]') ||
+      startsWith(github.event.issue.title, '[garry/sleep]') ||
+      startsWith(github.event.issue.title, '[garry/treat]')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Parse action
+        id: parse
+        env:
+          TITLE: ${{ github.event.issue.title }}
+          BODY: ${{ github.event.issue.body }}
+        run: |
+          # Title format: [garry/<action>] ...
+          action=$(echo "$TITLE" | sed -nE 's/^\[garry\/([a-z]+)\].*/\1/p')
+          if [ -z "$action" ]; then echo "unknown action"; exit 1; fi
+          echo "action=$action" >> "$GITHUB_OUTPUT"
+
+      - name: Apply action
+        env:
+          GARRY_REPO: ${{ github.repository }}
+        run: |
+          npm run act -- ${{ steps.parse.outputs.action }} "${{ github.event.issue.user.login }}"
+
+      - name: Commit
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(garry): @${{ github.event.issue.user.login }} ${{ steps.parse.outputs.action }} 🐾"
+          file_pattern: "state.json garry.svg README.md"
+          commit_user_name: garry-bot
+          commit_user_email: garry-bot@users.noreply.github.com
+
+      - name: Reply + close issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          STATE=$(cat state.json)
+          MOOD=$(node -e "console.log(JSON.parse(process.argv[1]).mood)" "$STATE")
+          HUNGER=$(node -e "console.log(JSON.parse(process.argv[1]).stats.hunger)" "$STATE")
+          HAPPY=$(node -e "console.log(JSON.parse(process.argv[1]).stats.happiness)" "$STATE")
+          ENERGY=$(node -e "console.log(JSON.parse(process.argv[1]).stats.energy)" "$STATE")
+          AFF=$(node -e "console.log(JSON.parse(process.argv[1]).stats.affection)" "$STATE")
+          gh issue comment ${{ github.event.issue.number }} --body "🐾 thanks @${{ github.event.issue.user.login }}!
+
+          garry is now feeling **\`${MOOD}\`**.
+
+          | hunger | happiness | energy | affection |
+          | ------ | --------- | ------ | --------- |
+          | ${HUNGER} | ${HAPPY} | ${ENERGY} | ${AFF} |
+          "
+          gh issue close ${{ github.event.issue.number }}

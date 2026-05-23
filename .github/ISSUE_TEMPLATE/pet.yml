@@ -1,0 +1,19 @@
+name: 🤚 pet Garry
+description: Give Garry some pets. Bumps affection + happiness.
+title: "[garry/pet] head pats"
+labels: ["garry", "pet"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🤚 pet Garry
+
+        Click **Submit new issue** below to pet Garry. He'll close the issue
+        and reply with his new mood. No, you don't have to write anything.
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: I'm here to pet the cat
+      options:
+        - label: Yes, I love Garry.
+          required: true
