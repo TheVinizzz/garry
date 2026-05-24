@@ -3,12 +3,12 @@
   "born": "2026-05-23T05:58:01.308Z",
   "stats": {
     "hunger": 0,
-    "happiness": 17,
+    "happiness": 16,
     "energy": 0,
-    "affection": 17
+    "affection": 16
   },
   "mood": "sleep",
-  "lastTick": "2026-05-24T23:28:05.225Z",
+  "lastTick": "2026-05-24T23:54:50.695Z",
   "lastAction": {
     "user": "TheVinizzz",
     "action": "treat",
